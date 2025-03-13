@@ -1,19 +1,25 @@
-const Cart = () => {
-    const items = ["Wireless earbuds", "Power bank", "New SSD", "Hoodie"];
-  
+import Greeting from "./components/Greeting";
+import UserStatus from "./components/UserStatus";
+import Weather from "./components/Weather";
 
+function App() {
   return (
     <main>
-      <h1>Cart</h1>
-      {items.length > 0 && <h2>You have {items.length} items in your Cart</h2>}
-      <ul>
-        <h4>Products</h4>
-        {items.map((item) => (
-          <li key={Math.random()}>{item}</li>
-        ))}
-      </ul>
+      <h1>Conditional Rendering in React</h1>
+      <Weather temp={6} />
+      <Weather temp={18} />
+      <Weather temp={37} />
+
+      <UserStatus loggedIn={true} isAdmin={true} />
+      <UserStatus loggedIn={true} isAdmin={true}/>
+
+      <h1>Conditional Rendering in React</h1>
+
+      <Greeting timeOfDay="morning" />
+      <Greeting timeOfDay="afternoon" />
+      <Greeting />
     </main>
   );
-};
+}
 
-export default Cart;
+export default App;
