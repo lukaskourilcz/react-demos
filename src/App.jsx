@@ -1,14 +1,19 @@
-import IconComponent from "./components/IconComponent";
-import ProfileCard from "./components/ProfileCard";
-import StyledCard from "./components/StyledCard";
+const Copy = () => {
 
+  const copyHandler = () => {
+    console.log('dont steal')
+  }
+
+    return (
+      <p onCopy={copyHandler}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor delectus necessitatibus impedit, saepe facere nisi corporis, 
+        molestiae accusamus nostrum ratione ex cupiditate soluta omnis mollitia! Delectus vel recusandae consectetur molestias?</p>
+    )
+}
 
 function App() {
   return (
     <section>
-      <StyledCard />
-      <ProfileCard />
-      <IconComponent />
+      <Copy/>
     </section>
   );
 }
