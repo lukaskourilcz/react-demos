@@ -1,24 +1,15 @@
-import Greeting from "./components/Greeting";
-import UserStatus from "./components/UserStatus";
-import Weather from "./components/Weather";
+import IconComponent from "./components/IconComponent";
+import ProfileCard from "./components/ProfileCard";
+import StyledCard from "./components/StyledCard";
+
 
 function App() {
   return (
-    <main>
-      <h1>Conditional Rendering in React</h1>
-      <Weather temp={6} />
-      <Weather temp={18} />
-      <Weather temp={37} />
-
-      <UserStatus loggedIn={true} isAdmin={true} />
-      <UserStatus loggedIn={true} isAdmin={true}/>
-
-      <h1>Conditional Rendering in React</h1>
-
-      <Greeting timeOfDay="morning" />
-      <Greeting timeOfDay="afternoon" />
-      <Greeting />
-    </main>
+    <section>
+      <StyledCard />
+      <ProfileCard />
+      <IconComponent />
+    </section>
   );
 }
 
